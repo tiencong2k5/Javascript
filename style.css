@@ -1,0 +1,45 @@
+:root{
+    --bg1:#9b59b6;
+    --bg2:#3498db;
+    --text:#26ade4;
+}
+/*root đùng để xác định biến toàn cục vd gọi biến var(bg1) sẽ ra màu tương unwgss*/
+*{
+    padding: 0;
+    margin:0;   
+    box-sizing: border-box;
+/* tính toán kích thước của phần từ bao gồm các padding và border*/
+/* content-box: giá trị mặc định,kích thước tính toán từ nội dung bao gồm cả kích thước của nội dung và
+ các thuộc tính padding và border. Điều này có nghĩa là kích thước của phần tử sẽ tăng thêm với các giá trị của padding và border.*/
+/*border-box: kích thước của phần tử sẽ tính toán từ biên của phần tử, bao gồm cả nội dung, padding và border. Điều này có nghĩa là kích thước 
+của phần tử sẽ không thay đổi khi bạn thay đổi giá trị của padding và border, và padding và border sẽ "nằm" trong kích thước đã xác định của phần tử.*/
+}
+body{
+    background-image: url(img.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover ;/*cover:co dãn lấp đầy phần tử; contain:co dãn ko làm biến đổi tỉ lệ khung hình*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;/*các ptu con được căn chỉnh trên trục chính*/
+    text-align: center;/* căn chính văn bản*/
+    align-items: center;/* căn chỉnh phần tử con theo trục dọc*/
+    justify-content: center;/* căn chỉnh các phần tử con theo trục chính( để mặc định là chiều ngang)*/
+}
+.item{
+    margin-right: 20px;
+    height: 120px;
+    width: 120px;
+    border: 2px solid var(--text);
+    display: flex;
+    flex-direction: column;/* xác định hướng pt con;row các ptu sắp xếp trái sang phải theo chiều ngang;column: các ptu con sắp xếp theo chiều dọc từ trên xuống dưới*/
+    border-radius: 50%;/* làm tròn góc*/
+    justify-content: center;
+    color: #fff;
+    
+}
+.item span {
+    font-weight: bold;
+    font-size: 32px;/*xác định kích thước văn bản*/
+    margin-top:12px ;/*xác định độ dày của chữ*/
+}
